@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <h1>Javascript Handson-8  <span>(Problem Solving)</span></h1>
+            <h2>Q1. Find the Smaller Angle</h2>
+            <h2><pre>Ans.
+                var Minimal_Angle = (h, m) => {
+                    let x=(30*h) - (11/2*m);
+                    if(x>180){
+                      return  Math.abs(360-x);  
+                    }else{
+                    return  Math.abs(x);
+                    }
+                  };
+            </pre></h2>
+            <h2>Q2. Check whether the year is Leap year or not.</h2>
+            <h2><pre>Ans.
+                var Check_Leap = (year) => {
+                    if(year%4===0 && (year%100!==0 ||  year%400===0)){
+                      return 'Leap Year';
+                    }
+                    else{
+                      return 'Non Leap Year';
+                    }
+                  };
+            </pre></h2>
+            <h2>Q3. Perfect Number Check.</h2>
+            <h2><pre>Ans.
+                var Perfect_Check = (N) => {
+                    let div=[];
+                    for(let i=0;i< 100000;i++){
+                      if(N%i===0){
+                        div.push(i)
+                      }
+                    }
+                    let sum=0;
+                    for(let i=0;i< div.length;i++){
+                      sum+=div[i];
+                    }
+                    if(sum==N){
+                      return 'YES'
+                    }else{
+                      return 'NO'
+                    }
+                  };
+            </pre></h2>
+            <h2>Q4. Reverse a Number.</h2>
+            <h2><pre>Ans.
+                var Reverse_Number = (N) =>{
+                    let m=N.toString();
+                    let done='';
+                    for(let i=m.length-1;i>=0;i--){
+                      done+=m[i]
+                    }
+                    return parseInt(done);
+                  };
+            </pre></h2>
+            <h2>Q5. Substring Check.</h2>
+            <h2><pre>Ans.
+                s1=S1.split(' ')
+                let count=0;
+                for(let i=0;i< s1.length;i++){
+                  if(s1[i]==S2){
+                    count++;
+                  }
+                }
+                if(count>0){
+                  return 'YES'
+                }else{
+                  return 'NO'
+                }
+            </pre></h2>
+    </div>
+</body>
+</html>
